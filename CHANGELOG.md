@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/zlatanpham/release-note-clone-test/compare/v1.1.0...v1.1.1) (2021-02-18)
+
+
+### Bug Fixes
+
+* missing echo ([8154bc6](https://github.com/zlatanpham/release-note-clone-test/commit/8154bc60d1471fdbeb687fd9377401575aa89638))
+* missing echo ([3320c19](https://github.com/zlatanpham/release-note-clone-test/commit/3320c19136f1b483dff7ec414958c52eacf64b81))
+
 # [1.1.0](https://github.com/zlatanpham/release-note-clone-test/compare/v1.0.3...v1.1.0) (2021-02-18)
 
 
