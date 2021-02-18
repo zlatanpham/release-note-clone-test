@@ -41,14 +41,17 @@ jobs:
         with:
           github-token: '${{secrets.GITHUB_TOKEN}}'
           script: |
-            try{
+            try {
               fetch('https://be.fortress.d.foundation/webhook/basecamp/changelog-message', {
                 method: 'POST',
                 headers: {
-                  'Content-Type': 'application/json',
+                  'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({project: "WEBUILD", message: "${{ steps.extract-release-notes.outputs.release_notes }}" })
-              })
-            }catch(error){
+                body: JSON.stringify({
+                  project: 'WEBUILD',
+                  message: '${{ steps.extract-release-notes.outputs.release_notes }}'
+                })
+              });
+            } catch (error) {
               console.log(error);
             }
