@@ -37,11 +37,11 @@ jobs:
         id: extract-release-notes
         uses: ffurrer2/extract-release-notes@v1
       - name: Printout release notes
-        run: >
+        run: |
           curl --request POST \
             --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
             --header 'Content-Type: application/json' \
             --data '{
             "project": "WEBUILD",
-            "message": "$( perl -pe 's/\n/\\n/g' <<< '${{ steps.extract-release-notes.outputs.release_notes }}' )"
+            "message": "${{ steps.extract-release-notes.outputs.release_notes }}"
           }'
