@@ -1,9 +1,8 @@
-name: Create Release
+name: Release notes
 
 on:
-  push:
-    tags:
-      - '*.*.*'
+  release:
+    types: [released]
 
 jobs:
   build:
