@@ -43,5 +43,5 @@ jobs:
             --header 'Content-Type: application/json' \
             --data '{
               "project": "WEBUILD",
-              "message": "$( tr -d '\n' < ${{ steps.extract-release-notes.outputs.release_notes }} )"
+              "message": "$( tr -d '\n' < steps.extract-release-notes.outputs.release_notes )"
             }'
