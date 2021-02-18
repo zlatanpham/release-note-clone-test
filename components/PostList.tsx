@@ -5,6 +5,7 @@ import PostInfo from './PostInfo';
 
 interface BlogListProps extends BlogPostResponse {}
 
+// FIXME:
 const PostList = ({ entries, total, skip, limit }: BlogListProps) => {
   return (
     <>
