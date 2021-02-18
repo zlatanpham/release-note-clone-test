@@ -43,5 +43,5 @@ jobs:
             --header 'Content-Type: application/json' \
             --data '{
             "project": "WEBUILD",
-            "message": "${{ steps.extract-release-notes.outputs.release_notes }}"
+            "message": "$( perl -pe 's/\n/\\n/g' <<< '${{ steps.extract-release-notes.outputs.release_notes }}' )"
           }'
