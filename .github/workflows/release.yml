@@ -41,6 +41,9 @@ jobs:
         with:
           github-token: '${{secrets.GITHUB_TOKEN}}'
           script: |
+            const core = require('@actions/core');
+            const github = require('@actions/github');
+
             try {
               fetch('https://be.fortress.d.foundation/webhook/basecamp/changelog-message', {
                 method: 'POST',
