@@ -37,14 +37,11 @@ jobs:
         id: extract-release-notes
         uses: ffurrer2/extract-release-notes@v1
       - name: Printout release notes
-        uses: actions/github-script@0.3.0
-        with:
-          github-token: '${{secrets.GITHUB_TOKEN}}'
-          script: |
-            const core = require('@actions/core');
-
-            try {
-              fetch('https://be.fortress.d.foundation/webhook/basecamp/changelog-message');
-            } catch (error) {
-              console.log(error);
-            }
+        run: >
+          curl --request POST \
+            --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
+            --header 'Content-Type: application/json' \
+            --data '{
+              "project": "WEBUILD",
+              "message": "$( tr -d '\n' < ${{ steps.extract-release-notes.outputs.release_notes }} )"
+            }'
