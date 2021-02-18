@@ -44,16 +44,7 @@ jobs:
             const core = require('@actions/core');
 
             try {
-              fetch('https://be.fortress.d.foundation/webhook/basecamp/changelog-message', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                  project: 'WEBUILD',
-                  message: '${{ steps.extract-release-notes.outputs.release_notes }}'
-                })
-              });
+              fetch('https://be.fortress.d.foundation/webhook/basecamp/changelog-message');
             } catch (error) {
               console.log(error);
             }
