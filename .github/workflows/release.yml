@@ -37,4 +37,4 @@ jobs:
         id: extract-release-notes
         uses: ffurrer2/extract-release-notes@v1
       - name: Printout release notes
-        run: echo $(steps.extract-release-notes.outputs.release_notes) for $(github.ref)
+        run: '${{ steps.extract-release-notes.outputs.release_notes }} for ${{github.ref}}'
