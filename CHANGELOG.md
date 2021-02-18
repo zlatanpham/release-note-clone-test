@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/zlatanpham/release-note-clone-test/compare/v1.2.0...v1.3.0) (2021-02-18)
+
+
+### Features
+
+* testing ([2426d4f](https://github.com/zlatanpham/release-note-clone-test/commit/2426d4f5b584bb94f0571634c75819db2132a2b2))
+
 # [1.2.0](https://github.com/zlatanpham/release-note-clone-test/compare/v1.1.5...v1.2.0) (2021-02-18)
 
 
