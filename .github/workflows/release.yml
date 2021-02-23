@@ -63,7 +63,6 @@ jobs:
             core.setOutput('content', content);
         id: release_info
 
-      - name: Print constant
       - name: Printout release notes
         run: >
           curl --request POST \
