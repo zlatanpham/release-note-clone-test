@@ -33,19 +33,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-      - name: Print latest commit message
-        run: |
-          echo '${{ github.event.head_commit.message }}'
-          echo '${{ github.event.head_commit }}'
-      # - name: Extract release notes
-      #   id: extract-release-notes
-      #   uses: ffurrer2/extract-release-notes@v1
-      # - name: Printout release notes
-      #   run: >
-      #     curl --request POST \
-      #       --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
-      #       --header 'Content-Type: application/json' \
-      #       --data '{
-      #         "project": "WEBUILD",
-      #         "message": `${{ steps.extract-release-notes.outputs.release_notes }}`
-      #       }'
+      - uses: actions/github-script@0.3.0
+        with:
+          github-token: '${{secrets.GITHUB_TOKEN}}'
+          script: |
+            const content = await fs.readFile('./CHANGELOG.md', 'utf8')
+            core.setOutput('content', content)
+          id: release_info
+
+      - name: Printout release notes
+        run: >
+          curl --request POST \
+            --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
+            --header 'Content-Type: application/json' \
+            --data '{
+              "project": "WEBUILD",
+              "message": "${{ steps.release_info.outputs.content }}"
+            }'
