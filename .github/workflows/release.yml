@@ -52,7 +52,7 @@ jobs:
               }
               output.push(line);
             };
-            const content = output.join('').replace(/[\\]/g, '\\\\')
+            const content = output.join('\\n').replace(/[\\]/g, '\\\\')
                             .replace(/[\"]/g, '\\\"')
                             .replace(/[\/]/g, '\\/')
                             .replace(/[\b]/g, '\\b')
