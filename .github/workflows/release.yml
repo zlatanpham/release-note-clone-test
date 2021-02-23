@@ -33,6 +33,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
+      - name: Print latest commit message
+        run: |
+          echo '${{ github.event.head_commit.message }}'
+          echo '${{ github.event.head_commit }}'
       # - name: Extract release notes
       #   id: extract-release-notes
       #   uses: ffurrer2/extract-release-notes@v1
