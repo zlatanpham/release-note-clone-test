@@ -1,3 +1,11 @@
+## [1.9.14](https://github.com/zlatanpham/release-note-clone-test/compare/v1.9.13...v1.9.14) (2021-02-23)
+
+
+### Performance Improvements
+
+* test ([28d40c5](https://github.com/zlatanpham/release-note-clone-test/commit/28d40c5e99a67e2c2907c12f584879e2a40a233d))
+* test ([a4f3ffa](https://github.com/zlatanpham/release-note-clone-test/commit/a4f3ffaef8e80b5d75becb4a7cd986a9a7eb405d))
+
 ## [1.9.13](https://github.com/zlatanpham/release-note-clone-test/compare/v1.9.12...v1.9.13) (2021-02-23)
 
 
