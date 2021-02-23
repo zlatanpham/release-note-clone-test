@@ -39,19 +39,39 @@ jobs:
           script: |
             const core = require("@actions/core");
             const { readFileSync } = require("fs");
-            const content = await readFileSync('CHANGELOG.md', 'utf8');
-            core.setOutput('content', content.replace(/(?:\r\n|\r|\n)/g, '<br>'));
+            const changelog = await readFileSync('CHANGELOG.md', 'utf8');
+            const lines = content.split('/n');
+            const output = [];
+            let count = 0;
+            for(let line of lines){
+              if(line.startsWith('## [')){
+                count++;
+                if(count === 2){
+                  break;
+                }
+              }
+              output.push(line);
+            };
+            const content = output.join('').replace(/[\\]/g, '\\\\')
+                            .replace(/[\"]/g, '\\\"')
+                            .replace(/[\/]/g, '\\/')
+                            .replace(/[\b]/g, '\\b')
+                            .replace(/[\f]/g, '\\f')
+                            .replace(/[\n]/g, '\\n')
+                            .replace(/[\r]/g, '\\r')
+                            .replace(/[\t]/g, '\\t')
+            core.setOutput('content', content);
         id: release_info
 
       - name: Print constant
         run: |
           echo "${{ steps.release_info.outputs.content }}"
-      - name: Printout release notes
-        run: >
-          curl --request POST \
-            --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
-            --header 'Content-Type: application/json' \
-            --data '{
-              "project": "WEBUILD",
-              "message": "${{ steps.release_info.outputs.content }}"
-            }'
+      # - name: Printout release notes
+      #   run: >
+      #     curl --request POST \
+      #       --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
+      #       --header 'Content-Type: application/json' \
+      #       --data '{
+      #         "project": "WEBUILD",
+      #         "message": "${{ steps.release_info.outputs.content }}"
+      #       }'
