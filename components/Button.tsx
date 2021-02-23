@@ -6,6 +6,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   textColorClassName?: string;
 }
 
+// FIXME:
 const Button = ({
   children,
   className,
