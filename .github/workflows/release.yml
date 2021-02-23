@@ -37,7 +37,9 @@ jobs:
         with:
           github-token: '${{secrets.GITHUB_TOKEN}}'
           script: |
-            const content = await fs.readFile('./CHANGELOG.md', 'utf8')
+            const core = require("@actions/core");
+            const { readFileSync } = require("fs")
+            const content = await readFile('./CHANGELOG.md', 'utf8')
             core.setOutput('content', content)
           id: release_info
 
