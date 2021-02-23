@@ -41,8 +41,13 @@ jobs:
             const { readFileSync } = require("fs");
             const content = await readFileSync('CHANGELOG.md', 'utf8');
             core.setOutput('content', content);
+            core.setOutput('test', 'hello world');
           id: release_info
 
+      - name: Print constant
+        run: |
+          echo "${{ steps.release_info.outputs.content }}"
+          echo "${{ steps.release_info.outputs.test }}"
       - name: Printout release notes
         run: >
           curl --request POST \
