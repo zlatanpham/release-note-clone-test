@@ -40,7 +40,7 @@ jobs:
             const core = require("@actions/core");
             const { readFileSync } = require("fs");
             const changelog = await readFileSync('CHANGELOG.md', 'utf8');
-            const lines = changelog.split('/n');
+            const lines = changelog.split(/[\n]/g);
             const output = [];
             let count = 0;
             for(let line of lines){
