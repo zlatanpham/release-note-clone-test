@@ -44,7 +44,7 @@ jobs:
             const output = [];
             let count = 0;
             for(let line of lines){
-              if(line.startsWith('## [')){
+              if(line.startsWith('## [') || line.startsWith('# [')){
                 count++;
                 if(count === 2){
                   break;
@@ -52,14 +52,7 @@ jobs:
               }
               output.push(line);
             };
-            const content = output.join('\\n').replace(/[\\]/g, '\\\\')
-                            .replace(/[\"]/g, '\\\"')
-                            .replace(/[\/]/g, '\\/')
-                            .replace(/[\b]/g, '\\b')
-                            .replace(/[\f]/g, '\\f')
-                            .replace(/[\n]/g, '\\n')
-                            .replace(/[\r]/g, '\\r')
-                            .replace(/[\t]/g, '\\t')
+            const content = output.join('\n')
             core.setOutput('content', content);
         id: release_info
 
