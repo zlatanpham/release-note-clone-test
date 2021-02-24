@@ -26,4 +26,18 @@ const Button = ({
   </button>
 );
 
+interface RangeProps<T> {
+  value: T;
+  onChange: (value: T) => void;
+}
+
+function Range<T extends number | [number, number]>(props: RangeProps<T>) {
+  const { value = 1 } = props;
+  return <div>{Array.isArray(props.value) ? props.value[0] : props.value}</div>;
+}
+
+const Component = () => {
+  return <Range value={[0, 1]} onChange={value => value[0]} />;
+};
+
 export default Button;
