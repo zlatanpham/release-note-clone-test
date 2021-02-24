@@ -1,3 +1,5 @@
+## [1.11.2](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.1...v1.11.2) (2021-02-24)
+
 ## [1.11.1](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.0...v1.11.1) (2021-02-24)
 
 
