@@ -25,7 +25,7 @@ jobs:
           script: |
             const core = require("@actions/core");
             const { readFileSync } = require("fs");
-            const changelog = await readFileSync('apps/website/CHANGELOG.md', 'utf8');
+            const changelog = await readFileSync('./apps/website/CHANGELOG.md', 'utf8');
             const lines = changelog.split(/[\n]/g).splice(5);
             const output = [];
             let count = 0;
