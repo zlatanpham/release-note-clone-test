@@ -26,47 +26,47 @@
           "types": [
             {
               "type": "feat",
-              "section": ":sparkles: Features",
+              "section": "✨ Features",
               "hidden": false
             },
             {
               "type": "fix",
-              "section": ":bug: Bug Fixes",
+              "section": "🐛 Bug Fixes",
               "hidden": false
             },
             {
               "type": "docs",
-              "section": ":memo: Document",
+              "section": "📝 Document",
               "hidden": false
             },
             {
               "type": "style",
-              "section": ":barber: Style",
+              "section": "💈 Style",
               "hidden": false
             },
             {
               "type": "refactor",
-              "section": ":zap: Refactor",
+              "section": "⚡ Refactor",
               "hidden": false
             },
             {
               "type": "perf",
-              "section": ":fast_forward: Performance Improvement",
+              "section": "🚀 Performance Improvement",
               "hidden": false
             },
             {
               "type": "test",
-              "section": ":white_check_mark: Test",
+              "section": "👀 Test",
               "hidden": false
             },
             {
               "type": "ci",
-              "section": ":repeat: CI",
+              "section": "🔁 CI",
               "hidden": false
             },
             {
               "type": "chore",
-              "section": "Chores",
+              "section": "💅 Chores",
               "hidden": false
             }
           ]
