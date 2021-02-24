@@ -1,3 +1,10 @@
+### [1.11.4](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.3...v1.11.4) (2021-02-24)
+
+
+### Chores
+
+* test multiple types ([8ca105c](https://github.com/zlatanpham/release-note-clone-test/commit/8ca105cf7e10bd7bd8efd9ec3d56469870bb3c75))
+
 ## [1.11.3](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.2...v1.11.3) (2021-02-24)
 
 ## [1.11.2](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.1...v1.11.2) (2021-02-24)
