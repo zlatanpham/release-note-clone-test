@@ -52,7 +52,7 @@ jobs:
               }
               output.push(line);
             };
-            output[0] = output[0] + `🎉🎉🎉`;
+            output[0] = output[0];
             const content = output.join('\\n');
             core.setOutput('content', content);
         id: release_info
