@@ -79,6 +79,7 @@ jobs:
         id: release_info
 
       - name: Printout release notes
+        if: steps.changed_files.outputs.files_changed == 'true'
         run: >
           curl --request POST \
             --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
