@@ -1,3 +1,10 @@
+### [1.11.5](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.4...v1.11.5) (2021-02-24)
+
+
+### :repeat: CI
+
+* test ([234abf6](https://github.com/zlatanpham/release-note-clone-test/commit/234abf611cbec89e950c44dc8f6f68712f0407ba))
+
 ### [1.11.4](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.3...v1.11.4) (2021-02-24)
 
 
