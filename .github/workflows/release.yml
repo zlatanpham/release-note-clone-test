@@ -59,7 +59,7 @@ jobs:
             const output = [];
             let count = 0;
             for(let line of lines){
-              if(line.startsWith('## [') || line.startsWith('# [')){
+              if(/\[\d+\.\d+\.\d+\]/g.test(line){
                 count++;
                 if(count === 2){
                   break;
