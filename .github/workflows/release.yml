@@ -48,13 +48,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v2
-      - name: Run Find changed files.
-        id: changed_files
-        uses: jackton1/find-changed-files@v1.1
-        with:
-          files: 'CHANGELOG.md'
       - uses: actions/github-script@0.3.0
-        if: steps.changed_files.outputs.files_changed == 'true'
         with:
           github-token: '${{secrets.GITHUB_TOKEN}}'
           script: |
@@ -79,7 +73,6 @@ jobs:
         id: release_info
 
       - name: Printout release notes
-        if: steps.changed_files.outputs.files_changed == 'true'
         run: >
           curl --request POST \
             --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
