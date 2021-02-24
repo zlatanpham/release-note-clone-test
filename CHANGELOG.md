@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.0...v1.11.1) (2021-02-24)
+
+
+### Bug Fixes
+
+* test abc ([54ba08f](https://github.com/zlatanpham/release-note-clone-test/commit/54ba08f4d1d42b8a1eb268ae953a0dd85c78e726))
+
 # [1.11.0](https://github.com/zlatanpham/release-note-clone-test/compare/v1.10.3...v1.11.0) (2021-02-24)
 
 
