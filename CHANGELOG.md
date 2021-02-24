@@ -1,3 +1,10 @@
+### [1.11.7](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.6...v1.11.7) (2021-02-24)
+
+
+### :repeat: CI
+
+* fix incorrect condition check ([0d156e2](https://github.com/zlatanpham/release-note-clone-test/commit/0d156e2a12b44cdf6053bc1afe56c83beaf3468c))
+
 ### [1.11.6](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.5...v1.11.6) (2021-02-24)
 
 
