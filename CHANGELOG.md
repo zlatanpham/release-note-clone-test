@@ -1,3 +1,10 @@
+### [1.12.2](https://github.com/zlatanpham/release-note-clone-test/compare/v1.12.1...v1.12.2) (2021-02-24)
+
+
+### 🔁 CI
+
+* test ([7e854bb](https://github.com/zlatanpham/release-note-clone-test/commit/7e854bb56d10d2925be3c105c4de4fd06b9cf0c9))
+
 ### [1.12.1](https://github.com/zlatanpham/release-note-clone-test/compare/v1.12.0...v1.12.1) (2021-02-24)
 
 
