@@ -18,6 +18,7 @@ jobs:
     needs: build
     timeout-minutes: 20
     steps:
+      - uses: actions/checkout@v2
       - name: Get release info
         uses: actions/github-script@0.3.0
         with:
@@ -25,7 +26,7 @@ jobs:
           script: |
             const core = require("@actions/core");
             const { readFileSync } = require("fs");
-            const changelog = await readFileSync('${{ github.workspace }}/apps/website/CHANGELOG.md', 'utf8');
+            const changelog = await readFileSync('apps/website/CHANGELOG.md', 'utf8');
             const lines = changelog.split(/[\n]/g).splice(5);
             const output = [];
             let count = 0;
@@ -49,6 +50,6 @@ jobs:
             --url https://be.fortress.d.foundation/webhook/basecamp/changelog-message \
             --header 'Content-Type: application/json' \
             --data '{
-              "project": "WEGO",
+              "project": "WEBUILD",
               "message": "${{ steps.release_info.outputs.content }}"
             }'
