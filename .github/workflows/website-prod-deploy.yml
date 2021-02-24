@@ -3,7 +3,7 @@ name: Website production deployment
 on:
   push:
     tags:
-      - @mono/website@\d+\.\d+\.\d+
+      - '@mono/website@\d+\.\d+\.\d+'
 
 jobs:
   build:
