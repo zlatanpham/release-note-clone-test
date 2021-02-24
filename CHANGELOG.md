@@ -1,3 +1,10 @@
+### [1.12.1](https://github.com/zlatanpham/release-note-clone-test/compare/v1.12.0...v1.12.1) (2021-02-24)
+
+
+### ⚡ Refactor
+
+* test ([86ad5e9](https://github.com/zlatanpham/release-note-clone-test/commit/86ad5e96e4d0475f102d4a01935a24b2109c9a6a))
+
 ## [1.12.0](https://github.com/zlatanpham/release-note-clone-test/compare/v1.11.7...v1.12.0) (2021-02-24)
 
 
