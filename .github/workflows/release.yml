@@ -10,8 +10,20 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v2
+  commit-check:
+    name: Commit check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check Commit Type
+        needs: build
+          uses: gsactions/commit-message-checker@v1
+          with:
+            pattern: '^(?!cronjob:).*$'
+            flags: 'gm'
+            error: 'Cronjob update so skip the release step'
   release:
-    needs: build
+    needs: commit-check
     name: Release
     runs-on: ubuntu-latest
     timeout-minutes: 20
