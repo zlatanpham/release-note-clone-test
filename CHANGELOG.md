@@ -1,3 +1,10 @@
+### [1.12.3](https://github.com/zlatanpham/release-note-clone-test/compare/v1.12.2...v1.12.3) (2021-02-24)
+
+
+### 🚿 Chores
+
+* test ([5a4c0ce](https://github.com/zlatanpham/release-note-clone-test/commit/5a4c0ce0b85e5abb9854aa27592db5f0d49bcaa5))
+
 ### [1.12.2](https://github.com/zlatanpham/release-note-clone-test/compare/v1.12.1...v1.12.2) (2021-02-24)
 
 
