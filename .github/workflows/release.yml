@@ -12,11 +12,11 @@ jobs:
       - uses: actions/checkout@v2
   commit-check:
     name: Commit check
+    needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - name: Check Commit Type
-        needs: build
           uses: gsactions/commit-message-checker@v1
           with:
             pattern: '^(?!cronjob:).*$'
