@@ -31,7 +31,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "prettify": "prettier -c --write \"*/**\""
+    "prettify": "prettier -c --write \"*/**\"",
+    "release": "npx semantic-release  --no-push"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
